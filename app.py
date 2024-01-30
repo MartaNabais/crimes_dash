@@ -4,8 +4,7 @@ from dash import Dash, dcc, html, Input, Output
 import plotly.express as px
 
 # First read dataset
-url = "https://statistics.gov.scot/downloads/cube-table?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Frecorded-crime"
-crimes_df = pd.read_csv(url)
+crimes_df = pd.read_csv("data/crimes_ratios_1997-2023.csv")
 
 # I will rename columns here, so they are more clear
 crimes_df.rename(columns={"FeatureCode": "LAD Code", "FeatureName": "LAD", "DateCode": "Date", "Crime or Offence": "Crime"}, inplace=True)
@@ -106,4 +105,5 @@ def display_time_series(ticker):
     return fig
 
 
-app.run_server(debug=True)
+if __name__ == '__main__':
+    app.run_server(debug=False)
