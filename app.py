@@ -1,6 +1,7 @@
 # to handle datasets
 import pandas as pd
 from dash import Dash, dcc, html, Input, Output
+import plotly.express as px
 
 # First read dataset
 url = "https://statistics.gov.scot/downloads/cube-table?uri=http%3A%2F%2Fstatistics.gov.scot%2Fdata%2Frecorded-crime"
