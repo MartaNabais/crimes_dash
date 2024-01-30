@@ -78,6 +78,7 @@ pivoted_crimes_ratios_df = pd.pivot_table(crimes_ratios_df, values="Value", inde
 # Here I am plotting the time series per Crime
 app = Dash(__name__)
 
+server = app.server
 
 app.layout = html.Div([
     html.H4('Crime Ratios Analysis'),
