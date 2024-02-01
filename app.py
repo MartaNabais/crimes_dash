@@ -80,7 +80,7 @@ app = Dash(__name__)
 server = app.server
 
 app.layout = html.Div([
-    html.H4('Crime Ratios Analysis'),
+    html.H4('Scottish Crime Rates Over Time'),
     dcc.Graph(id="time-series-chart"),
     html.P("Select Crime Type:"),
     dcc.Dropdown(
